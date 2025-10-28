@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", "Georgia", sans-serif;
+    background: linear-gradient(135deg, #FFF5F7 0%, #FFE8EC 100%);
+    color: #2D1B2E;
+}
+
+/* Header - Elegant Purple & Rose Gold Theme */
+header {
+    background: linear-gradient(135deg, #D946A6 0%, #9333EA 50%, #EC4899 100%);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+    font-style: italic;
+    opacity: 0.95;
+}
+
+/* Search Bar - Elegant & Soft */
+.search-container {
+    text-align: center;
+    padding: 25px;
+    background: linear-gradient(to bottom, #FFFFFF, #FFF5F7);
+    box-shadow: 0 2px 10px rgba(236, 72, 153, 0.1);
+}
+
+#searchBar {
+    width: 85%;
+    max-width: 650px;
+    padding: 15px 25px;
+    font-size: 16px;
+    border: 3px solid #EC4899;
+    border-radius: 30px;
+    outline: none;
+    background: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(236, 72, 153, 0.15);
+}
+
+#searchBar:focus {
+    border-color: #9333EA;
+    box-shadow: 0 4px 15px rgba(147, 51, 234, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Gallery - Card Layout */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Product Card */
+.item {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.15);
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(236, 72, 153, 0.3);
+    border-color: #EC4899;
+}
+
+/* Image Wrapper - FIXES IMAGE STRETCHING ISSUE */
+.image-wrapper {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #FFF5F7, #FFE8EC);
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Keeps aspect ratio, crops excess */
+    object-position: center;  /* Centers the image */
+    transition: transform 0.5s ease;
+}
+
+.item:hover .image-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Product Info Section */
+.info {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #FFFFFF, #FFF9FB);
+}
+
+.info h3 {
+    margin: 0 0 10px 0;
+    color: #9333EA;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.price {
+    margin: 10px 0 15px 0;
+    font-weight: bold;
+    color: #EC4899;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 2px rgba(236, 72, 153, 0.1);
+}
+
+/* WhatsApp Button - Attractive Green */
+.whatsapp-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Footer - Elegant Purple Theme */
+footer {
+    background: linear-gradient(135deg, #9333EA 0%, #D946A6 100%);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 50px;
+    box-shadow: 0 -4px 15px rgba(236, 72, 153, 0.3);
+}
+
+footer h2 {
+    margin: 0 0 15px 0;
+    font-size: 1.8em;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 1.05em;
+}
+
+footer .tagline {
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.9;
+    font-size: 1.1em;
+}
+
+/* Responsive Design - Mobile & Tablet */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .image-wrapper {
+        height: 280px;
+    }
+
+    #searchBar {
+        width: 90%;
+        padding: 12px 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 25px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.7em;
+    }
+
+    .image-wrapper {
+        height: 250px;
+    }
+
+    .info h3 {
+        font-size: 1.1em;
+    }
+
+    .price {
+        font-size: 1.2em;
+    }
+}
